@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+
 use Illuminate\Console\Command;
+use \App\Services\SendWelcomeEmail as SendWelcomeEmailService;
 
 class SendWelcomeEmail extends Command
 {
@@ -19,15 +21,18 @@ class SendWelcomeEmail extends Command
      * @var string
      */
     protected $description = 'Aixo es una comanda de test';
+    protected $email;
 
     /**
-     * Create a new command instance.
-     *
+     * SendWelcomeEmail constructor.
+     * @param $email
      */
-    public function __construct()
+    public function __construct(SendWelcomeEmailService $email)
     {
         parent::__construct();
+        $this->email = $email;
     }
+
 
     /**
      * Execute the console command.
@@ -36,6 +41,6 @@ class SendWelcomeEmail extends Command
      */
     public function handle()
     {
-        dump('SendEmail');
+        $this->email->send();
     }
 }
