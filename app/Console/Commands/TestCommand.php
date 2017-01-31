@@ -23,7 +23,6 @@ class TestCommand extends Command
     /**
      * Create a new command instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -37,6 +36,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        dd("test");
+        dump("test");
     }
 }
