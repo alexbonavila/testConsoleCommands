@@ -11,14 +11,14 @@ class TestCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'abdeb:test';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Aixo es una comanda de test';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        //
+        dd("test\n");
     }
 }
