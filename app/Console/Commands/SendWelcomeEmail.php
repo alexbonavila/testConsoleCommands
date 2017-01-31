@@ -4,14 +4,14 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class TestCommand extends Command
+class SendWelcomeEmail extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'abdeb:test';
+    protected $signature = 'abdeb:sendwlcomeemail';
 
     /**
      * The console command description.
@@ -36,6 +36,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        dump("test");
+        dump('SendEmail');
     }
 }

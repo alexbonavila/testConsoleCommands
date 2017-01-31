@@ -13,8 +13,7 @@ class SendWelcomeEmailController extends Controller
      */
     public function index()
     {
-        $data = [];
-        return view('sendWelcomeEmail',$data);
+        dump('SendEmail');
     }
 
 }
