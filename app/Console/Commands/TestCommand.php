@@ -37,6 +37,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        dd("test\n");
+        dd("test");
     }
 }
